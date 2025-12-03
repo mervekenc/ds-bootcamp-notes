@@ -1,0 +1,8 @@
+Date,Model,Shift,UnitsProduced,DefectCount
+2025-11-01,A3,Day,120,5
+2025-11-01,A3,Night,130,7
+2025-11-02,B5,Day,90,15
+2025-11-02,B5,Night,105,10
+2025-11-03,A3,Day,140,2
+2025-11-03,A3,Night,85,20
+2025-11-04,B5,Day,115,8
