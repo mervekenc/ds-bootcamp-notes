@@ -21,10 +21,20 @@ This repository documents my intensive bootcamp journey transitioning from **Ind
   - demonstratiing modular coding practices.
 
 ### 2. Regression Models (`/02_Regression_Models`)
-- **Focus:** Predicting continuous values using Linear Regression.
-- **Projects:**
-  - **Clean Room Analysis:** A multivariable regression case study to predict energy costs based on production, temperature, and active machinery.
-  - Model evaluation using R², MAE, and Actual vs. Predicted graphs.
+**Objective:** Mastering predictive analytics using Linear and Non-Linear algorithms.
+
+- **`01_simple_linear_regression.py`**:
+  - **Single Variable Analysis:** Predicting costs based on production volume.
+  - **Machine Efficiency:** Analyzing depreciation trends (negative slope).
+- **`02_multiple_linear_regression.py`**:
+  - **Multivariable Analysis (Clean Room Case):** Predicting energy bills based on 3 variables (Production, Temperature, Machines).
+  - Visualization of "Actual vs. Predicted" values to assess model performance.
+- **`03_regression_model_evaluation.py`**:
+  - **Model Validation:** Implementing Train-Test Split to prevent overfitting.
+  - **Metrics:** Calculating MAE (Mean Absolute Error) and R² Score.
+- **`04_decision_tree_regressor.py`**:
+  - **Non-Linear Modeling:** Using Decision Trees for complex, rule-based datasets.
+  - Visualizing the decision logic (Tree Diagram).
 
 ### 3. Classification Models (`/03_Classification_Models`)
 - **Focus:** Predicting binary outcomes (0/1) using Logistic Regression.
