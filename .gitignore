@@ -1,0 +1,17 @@
+# --- Data Files (Ignore large datasets) ---
+*.csv
+*.xlsx
+*.xls
+*.json
+*.zip
+*.parquet
+
+# --- Python Cache (Auto-generated garbage) ---
+__pycache__/
+*.pyc
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints/
+
+# --- System Files ---
+.DS_Store
