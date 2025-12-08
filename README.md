@@ -42,6 +42,20 @@ This repository documents my intensive bootcamp journey transitioning from **Ind
   - **E-Commerce Purchase Prediction:** Analyzing customer behavior (Age, Duration) to predict purchase probability.
   - **Confusion Matrix Analysis:** Understanding the business cost of False Positives vs. False Negatives.
 
+### 4. Capstone Project: Walmart Sales Forecasting (`/04_Capstone_Walmart_Sales`)
+**Objective:** Applying end-to-end Data Science pipeline skills to solve a real-world inventory and demand planning problem.
+
+- **`01_data_loading_and_merging.py`**:
+  - **Data Engineering:** Merging relational databases (Stores, Features, Sales) and validating `1:m` relationships.
+  - **Integrity Checks:** verifying data consistency (e.g., Holiday flags) across different sources.
+- **`02_data_cleaning.py`**:
+  - **Preprocessing:** Handling missing values in promotional markdown data.
+  - **Logic Correction:** Filtering out negative sales records (returns/errors) to ensure data quality.
+  - **Feature Engineering:** Decomposing dates into Year, Month, and Week for time-series modeling.
+- **`03_eda_visuals.py`**:
+  - **Exploratory Analysis:** Visualizing weekly sales trends to identify seasonality (Christmas/Thanksgiving spikes).
+  - **Hypothesis Testing:** Using Box Plots to statistically compare the impact of holidays on sales performance.
+
 ---
 
 ## 🛠 Tools & Technologies
