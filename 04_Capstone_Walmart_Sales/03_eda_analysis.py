@@ -58,7 +58,6 @@ for holiday_name, dates_list in special_dates.items():
             # Add the text label
             plt.text(x=target_date, y=daily_sales.max()*0.90, s=holiday_name, rotation=90, color=holiday_colors[holiday_name], fontsize=9, fontweight='bold')
 
-
 plt.title('Total Weekly Sales Over Time', fontsize=14)
 plt.xlabel('Date')
 plt.ylabel('Total Sales ($)')
@@ -100,4 +99,26 @@ for p in ax.patches:
                 xytext=(0, 10), 
                 textcoords='offset points',
                 fontweight='bold')
+plt.show()
+
+# ==========================================
+# 3. VISUALIZATION: Correlation Heatmap
+# ==========================================
+# Objective: Identify relationships between features
+
+# Select only numeric columns for correlation analysis
+# 'Store' is dropped because it's a categorical ID
+df_numeric = df.select_dtypes(include='number').drop(columns=['Store'], errors='ignore')
+# For testing
+print(df_numeric.head(3))
+
+# Correlation Matrix
+corr_matrix = df_numeric.corr()
+
+# Visualize: Heatmap
+plt.figure(figsize=(12, 10))
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5)
+
+plt.title("Feature Correlation Matrix", fontsize=16)
+
 plt.show()
