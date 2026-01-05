@@ -55,6 +55,33 @@ This repository documents my intensive bootcamp journey transitioning from **Ind
 - **`03_eda_visuals.py`**:
   - **Exploratory Analysis:** Visualizing weekly sales trends to identify seasonality (Christmas/Thanksgiving spikes).
   - **Hypothesis Testing:** Using Box Plots to statistically compare the impact of holidays on sales performance.
+- **`04_feature_engineering.py`**:
+  - **Time-Series Logic:** Creating "Lag Features" (Sales from 1 week ago, 1 year ago) to teach the model historical patterns.
+  - **Trend Smoothing:** Implementing Rolling Mean (Moving Average) to capture medium-term trends and reduce noise.
+  - **Event Modeling:** Designing mathematical countdowns ("Weeks to Christmas/Black Friday") to predict demand surges accurately.
+- **`05_train_model.py`**:
+  - **Validation Strategy:** Implementing a **Time-Based Split** (Train on 2010-2012, Test on 2012-Oct) instead of random shuffling to prevent data leakage.
+  - **Machine Learning:** Training a **Random Forest Regressor** to handle non-linear relationships in sales data.
+  - **Evaluation:** Measuring performance using MAE and R² Score, and generating a prediction vs. actual visualization.
+### 📊 Model Performance & Business Impact
+After training the Random Forest model, the system was tested on unseen data (Feb 2012 - Oct 2012) to simulate real-world forecasting.
+
+- **Accuracy (R² Score):** **96%**
+- **Mean Absolute Error (MAE):** ~$1.89
+- **Key Insight:** The model successfully captured high-variance events like **Christmas** and **Black Friday** thanks to the engineered `Countdown` features.
+
+**Top Drivers of Sales (Feature Importance):**
+1. **Department:** Different product categories have distinct sales baselines.
+2. **Lag_1 (Last Week's Sales):** Short-term momentum is a strong predictor.
+3. **Moving Average (MA4):** Monthly trend stability is crucial.
+4. **Size:** Store capacity directly correlates with volume.
+
+![Actual vs Predicted Sales Graph](04_Capstone_Walmart_Sales/model_performance_plot.png)
+
+### 🚀 Future Improvements
+- **Hyperparameter Tuning:** Implementing GridSearchCV to optimize Random Forest parameters.
+- **Easter Effect:** Adding a dynamic countdown for Easter (which changes dates yearly) to fix minor seasonal drifts.
+- **Deployment:** Creating a Flask API to serve predictions in real-time.
 
 ---
 
