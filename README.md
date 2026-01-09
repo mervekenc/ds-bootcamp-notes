@@ -63,10 +63,11 @@ This repository documents my intensive bootcamp journey transitioning from **Ind
   - **Validation Strategy:** Implementing a **Time-Based Split** (Train on 2010-2012, Test on 2012-Oct) instead of random shuffling to prevent data leakage.
   - **Machine Learning:** Training a **Random Forest Regressor** to handle non-linear relationships in sales data.
   - **Evaluation:** Measuring performance using MAE and R² Score, and generating a prediction vs. actual visualization.
-  - **`app.py`**:
+- **`app.py`**:
   - **Model Deployment:** Operationalizing the Random Forest model using **Flask** to create a REST API.
   - **Serialization:** Implementing `joblib` to load the pre-trained model (`.pkl`) and serve real-time predictions without retraining.
-  - **Error Handling:** robust input validation to ensure feature alignment between user input and model requirements.
+  - **Error Handling:** Robust input validation to ensure feature alignment between user input and model requirements.
+  - *Note:* The trained model (`.pkl`) is excluded from the repository due to file size limits. Please run `05_train_model.py` locally to generate the model before running the API.
 - **`test_api.py`**:
   - **Client Simulation:** Simulating a real-world client request (e.g., Store Manager input) to validate the API's response.
   - **Integration Testing:** Sending JSON payloads via `requests` library to verify the end-to-end prediction pipeline.

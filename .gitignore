@@ -15,3 +15,6 @@ __pycache__/
 
 # --- System Files ---
 .DS_Store
+
+# --- Models (Generated Artifacts) ---
+*.pkl
