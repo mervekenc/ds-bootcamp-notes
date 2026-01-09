@@ -1,3 +1,4 @@
+import joblib
 import pandas as pd
 from pathlib import Path
 from sklearn.ensemble import RandomForestRegressor
@@ -72,3 +73,9 @@ plt.show()
 importances = pd.Series(model.feature_importances_, index=X_train.columns)
 print("\nTop 5 Most Important Features:")
 print(importances.sort_values(ascending=False).head(5))
+
+# --- SAVE MODEL ---
+# Save the trained model to a file so we can use it later without retraining
+model_path = current_dir / "random_forest_model.pkl"
+joblib.dump(model, model_path)
+print(f"Trained model saved to: {model_path}")

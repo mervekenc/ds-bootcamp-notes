@@ -63,6 +63,14 @@ This repository documents my intensive bootcamp journey transitioning from **Ind
   - **Validation Strategy:** Implementing a **Time-Based Split** (Train on 2010-2012, Test on 2012-Oct) instead of random shuffling to prevent data leakage.
   - **Machine Learning:** Training a **Random Forest Regressor** to handle non-linear relationships in sales data.
   - **Evaluation:** Measuring performance using MAE and R² Score, and generating a prediction vs. actual visualization.
+  - **`app.py`**:
+  - **Model Deployment:** Operationalizing the Random Forest model using **Flask** to create a REST API.
+  - **Serialization:** Implementing `joblib` to load the pre-trained model (`.pkl`) and serve real-time predictions without retraining.
+  - **Error Handling:** robust input validation to ensure feature alignment between user input and model requirements.
+- **`test_api.py`**:
+  - **Client Simulation:** Simulating a real-world client request (e.g., Store Manager input) to validate the API's response.
+  - **Integration Testing:** Sending JSON payloads via `requests` library to verify the end-to-end prediction pipeline.
+
 ### 📊 Model Performance & Business Impact
 After training the Random Forest model, the system was tested on unseen data (Feb 2012 - Oct 2012) to simulate real-world forecasting.
 
@@ -81,13 +89,13 @@ After training the Random Forest model, the system was tested on unseen data (Fe
 ### 🚀 Future Improvements
 - **Hyperparameter Tuning:** Implementing GridSearchCV to optimize Random Forest parameters.
 - **Easter Effect:** Adding a dynamic countdown for Easter (which changes dates yearly) to fix minor seasonal drifts.
-- **Deployment:** Creating a Flask API to serve predictions in real-time.
+- **Cloud Hosting:** Deploying the Flask API to a cloud provider like AWS or Heroku for global access.
 
 ---
 
 ## 🛠 Tools & Technologies
 - **Language:** Python 3.x
-- **Libraries:** Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn
+- **Libraries:** Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn, Flask, Requests, Joblib
 - **Environment:** VS Code
 
 ## 📢 Note on Datasets
